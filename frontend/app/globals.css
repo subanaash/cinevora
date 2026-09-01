@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  /* Golden Hour — Cinevora */
+  --background: #f5efe3;
+  --background-secondary: #ede3d0;
+  --surface: #ffffff;
+  --border: #e5d9c3;
+
+  --text-primary: #2b241c;
+  --text-secondary: #8a7f6b;
+
+  /* Primary accent */
+  --terracotta: #c4622d;
+  --terracotta-hover: #a8511f;
+  --terracotta-tint: #f3ddcc;
+
+  /* Secondary accent */
+  --teal: #1f5f5b;
+  --teal-tint: #dceae9;
+
+  /* Status */
+  --success: #4a7c59;
+  --success-tint: #e3eedf;
+
+  --warning: #d9932e;
+  --warning-tint: #f8e8ce;
+
+  --danger: #c1442e;
+  --danger-tint: #f6dbd3;
+
+  /* Typography */
+  --font-ui: var(--font-inter), sans-serif;
+  --font-display: var(--font-fraunces), serif;
+
+  /* Geometry */
+  --radius: 8px;
+
+  /* Shadow */
+  --shadow-card: 0 1px 3px rgba(43, 36, 28, 0.08);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-hover: var(--terracotta-hover);
+  --color-terracotta-tint: var(--terracotta-tint);
+
+  --color-teal: var(--teal);
+  --color-teal-tint: var(--teal-tint);
+
+  --color-success: var(--success);
+  --color-success-tint: var(--success-tint);
+
+  --color-warning: var(--warning);
+  --color-warning-tint: var(--warning-tint);
+
+  --color-danger: var(--danger);
+  --color-danger-tint: var(--danger-tint);
+
+  --font-sans: var(--font-ui);
+  --font-serif: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Selection */
+::selection {
+  background: var(--terracotta-tint);
+  color: var(--text-primary);
+}
+
+/* Accessible focus state */
+:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 2px;
+}
+
+/* Shared premium surface */
+.cinevora-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+/* Display typography */
+.cinevora-heading {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
